@@ -1,36 +1,40 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
-
-      <p>
-        Search:
-        <input ng-model="$ctrl.query" />
-      </p>
-
-      <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
+<div class="row">
+  <div class="col-md-3">
+    <!--Sidebar content-->
+    <div class="row row-cols-1 g-2">
+      <div class="col-12">
+        <label>Search</label>
+        <input type="search" placeholder="Search items" class="form-control w-100" ng-model="$ctrl.query">
+      </div>
+      <div class="col-12">
+        <label>Sort by</label>
+        <select class="form-select w-100" ng-model="$ctrl.orderProp">
           <option value="name">Alphabetical</option>
           <option value="age">Newest</option>
         </select>
-      </p>
-
+      </div>
     </div>
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <ul class="phones">
-        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-          class="thumbnail phone-list-item">
-          <a href="#/phones/{{phone.id}}" class="thumb">
-            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
-          </a>
-          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
-        </li>
-      </ul>
-
+  </div>
+  <div class="col-md-9">
+    <!--Body content-->
+    <div class="row row-cols-1 g-2">
+      <div class="col" ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+        <div class="card w-100">
+          <div class="row g-0">
+            <div class="col-md-4 p-2">
+              <img ng-src="{{phone.imageUrl}}" class="img-fluid rounded-start" alt="{{phone.name}}">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{phone.name}}</h5>
+                <p class="card-text">{{phone.snippet}}</p>
+                <a href="#/phones/{{phone.id}}" class="btn btn-primary">show more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>

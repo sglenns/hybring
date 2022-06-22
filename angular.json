@@ -30,6 +30,7 @@
               "src/styles.css"
             ],
             "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js",
               "node_modules/angular/angular.js",
               "node_modules/angular-resource/angular-resource.js",
               "node_modules/angular-route/angular-route.js"
