@@ -2,7 +2,7 @@
 angular.
   module('phoneList').
   component('phoneList', {
-    templateUrl: './phone-list.template.html',
+    templateUrl: "./legacy/phone-list.template.html",
     controller: ['Phone',
       function PhoneListController(Phone) {
         this.phones = Phone.query();

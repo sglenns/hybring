@@ -5,10 +5,6 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-import * as angular from 'angular';
-import * as ngResource from 'angular-resource';
-import * as ngRoute from 'angular-route';
-
 // And import our AngularJS module
 import './app-ajs';
 

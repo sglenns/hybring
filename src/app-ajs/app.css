@@ -26,6 +26,11 @@ h1 {
   width: 100px;
 }
 
+.thumb img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 /* View: Phone detail */
 .phone {
   background-color: white;
@@ -38,7 +43,7 @@ h1 {
   width: 400px;
 }
 
-.phone:first-child {
+.phone.selected {
   display: block;
 }
 
@@ -81,13 +86,13 @@ h1 {
   font-weight: bold;
 }
 
-.specs > li {
+.specs>li {
   display: inline-block;
   vertical-align: top;
   width: 200px;
 }
 
-.specs > li > span {
+.specs>li>span {
   font-size: 1.2em;
   font-weight: bold;
 }

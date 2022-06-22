@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-phonecat-hybrid'`, () => {
+  it(`should have as title 'phone'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-phonecat-hybrid');
+    expect(app.title).toEqual('phone');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-phonecat-hybrid app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('phone app is running!');
   });
 });
