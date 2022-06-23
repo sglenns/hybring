@@ -4,7 +4,6 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { Phone } from '../app-ajs/core/phone/phone.service';
 
 @NgModule({
   declarations: [
@@ -15,9 +14,7 @@ import { Phone } from '../app-ajs/core/phone/phone.service';
     UpgradeModule,
     HttpClientModule
   ],
-  providers: [
-    Phone
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
