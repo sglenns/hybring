@@ -18,8 +18,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "public",
-            "index": "src/index.html",
+            "outputPath": "public/build",
+            "index": {
+              "input": "src/index.html",
+              "output": "../index.html"
+            },
+            "baseHref": "build/",
             "outputHashing": "none",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
