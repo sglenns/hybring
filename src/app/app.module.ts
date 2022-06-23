@@ -1,12 +1,10 @@
-import { DoBootstrap, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-
-// And import our AngularJS module
-import './app-ajs';
+import { Phone } from '../app-ajs/core/phone/phone.service';
 
 @NgModule({
   declarations: [
@@ -17,12 +15,9 @@ import './app-ajs';
     UpgradeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    Phone
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule implements DoBootstrap {
-  constructor(private upgrade: UpgradeModule) { }
-  ngDoBootstrap() {
-    this.upgrade.bootstrap(document.documentElement, ['phonecatApp']);
-  }
-}
+export class AppModule { }
