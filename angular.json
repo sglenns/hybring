@@ -114,18 +114,19 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/favicon.ico",
+              "src/legacy",
               "src/phones",
               "src/img"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/angular/angular.js",
-              "./node_modules/angular-resource/angular-resource.js",
-              "./node_modules/angular-route/angular-route.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/angular/angular.js",
+              "node_modules/angular-resource/angular-resource.js",
+              "node_modules/angular-route/angular-route.js"
             ]
           }
         }
